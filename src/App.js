@@ -42,10 +42,17 @@ function App() {
 
   return (
     <>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <h1>My little todo list</h1>
+      <br></br>
+      <h2>create a todo list here!</h2>
+      <h3>please use this as a small widget, your data will stay even when you refresh the page</h3>
       <input ref={todoNameRef} type="text" />
       <button onClick={handleAddTodo}>Add Todo</button>
       <button onClick={handleClearTodos}>Clear Completed Todo</button>
+      <br></br>
+      <br></br>
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <br></br>
       <div>{todos.filter(todo => !todo.complete).length} left to do</div>
     </>
   )
